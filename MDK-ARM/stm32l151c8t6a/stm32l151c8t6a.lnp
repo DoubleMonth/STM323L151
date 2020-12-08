@@ -26,6 +26,8 @@
 "stm32l151c8t6a\stm32l1xx_hal_tim_ex.o"
 "stm32l151c8t6a\stm32l1xx_hal_uart.o"
 "stm32l151c8t6a\system_stm32l1xx.o"
+"stm32l151c8t6a\sht31_iic.o"
+"stm32l151c8t6a\delay.o"
 --library_type=microlib --strict --scatter "stm32l151c8t6a\stm32l151c8t6a.sct"
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

@@ -27,7 +27,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
-
+#include "SHT31/sht31_iic.h"
+#include "Delay/delay.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -58,33 +59,8 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-uint8_t fac_us;
-
-void delay_init(uint8_t SYSCLK)
-{
-    HAL_SYSTICK_CLKSourceConfig(SYSTICK_CLKSOURCE_HCLK);
-    //SysTick  HCLK
-    fac_us=SYSCLK; //OS,fac_us 
-}
-void delay_us(uint32_t nus)
-{
-    uint32_t ticks;
-    uint32_t told,tnow,tcnt=0;
-    uint32_t reload=SysTick->LOAD; //LOAD 
-    ticks=nus*fac_us; //
-    told=SysTick->VAL; //
-    while(1)
-    {
-        tnow=SysTick->VAL;
-        if(tnow!=told)
-        {
-            if(tnow<told)tcnt+=told-tnow;// SYSTICK 
-            else tcnt+=reload-tnow+told;
-            told=tnow;
-            if(tcnt>=ticks)break; //
-        }
-    };
-}
+SHT31_DATA Read_SHT31_DATA;//存储的湿度数据
+ 
 /* USER CODE END 0 */
 
 /**
@@ -119,6 +95,8 @@ int main(void)
   MX_ADC_Init();
   MX_SPI1_Init();
   MX_USART1_UART_Init();
+  SHT31_IIC_Init();
+  printf("InitFinsh\r\n");
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
@@ -129,7 +107,8 @@ int main(void)
 	{
 		/* USER CODE END WHILE */
 		delay_us(1000*1000);
-		printf("uart test!\r\n");
+		SHT31_ReadTH(&Read_SHT31_DATA);
+		printf("temperature=%d,humidity=%d!\r\n",(uint32_t)(Read_SHT31_DATA.temperature*10.0),(uint32_t)(Read_SHT31_DATA.humidity*10.0));
 		/* USER CODE BEGIN 3 */
 	}
   /* USER CODE END 3 */

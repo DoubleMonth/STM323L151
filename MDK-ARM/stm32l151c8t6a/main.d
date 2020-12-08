@@ -34,4 +34,7 @@ stm32l151c8t6a\main.o: ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_exti.h
 stm32l151c8t6a\main.o: ../Core/Inc/adc.h
 stm32l151c8t6a\main.o: ../Core/Inc/spi.h
 stm32l151c8t6a\main.o: ../Core/Inc/usart.h
+stm32l151c8t6a\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 stm32l151c8t6a\main.o: ../Core/Inc/gpio.h
+stm32l151c8t6a\main.o: ..\UserHardware\SHT31/sht31_iic.h
+stm32l151c8t6a\main.o: ..\UserHardware\Delay/delay.h
