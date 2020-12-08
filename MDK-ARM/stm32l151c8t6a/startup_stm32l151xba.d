@@ -1,0 +1,1 @@
+stm32l151c8t6a\startup_stm32l151xba.o: startup_stm32l151xba.s
