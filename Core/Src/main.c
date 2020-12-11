@@ -29,6 +29,8 @@
 
 #include "SHT31/sht31_iic.h"
 #include "Delay/delay.h"
+#include "pcf8563/pcf8563.h"
+#include "ePaper_2in13/Example/EPD_Test.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -60,7 +62,8 @@ void SystemClock_Config(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 SHT31_DATA Read_SHT31_DATA;//存储的湿度数据
- 
+uint8_t clockBuffer[8]={0};
+extern uint8_t time_buffer[8];
 /* USER CODE END 0 */
 
 /**
@@ -95,10 +98,13 @@ int main(void)
   MX_ADC_Init();
   MX_SPI1_Init();
   MX_USART1_UART_Init();
-  SHT31_IIC_Init();
-  printf("InitFinsh\r\n");
+  
   /* USER CODE BEGIN 2 */
-
+	SHT31_IIC_Init();
+	PCF8563_IIC_Init();
+	PCF8563_WriteTime();
+	printf("InitFinsh\r\n");
+	EPD_2in13_test();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -109,6 +115,8 @@ int main(void)
 		delay_us(1000*1000);
 		SHT31_ReadTH(&Read_SHT31_DATA);
 		printf("temperature=%d,humidity=%d!\r\n",(uint32_t)(Read_SHT31_DATA.temperature*10.0),(uint32_t)(Read_SHT31_DATA.humidity*10.0));
+		PCF8563_ReadTime(clockBuffer);
+		printf("20%d%d-%d%d-%d%d  %d%d:%d%d:%d%d  week %d\r\n",clockBuffer[1]/10,clockBuffer[1]%10,clockBuffer[2]/10,clockBuffer[2]%10,clockBuffer[3]/10,clockBuffer[3]%10,clockBuffer[4]/10,clockBuffer[4]%10,clockBuffer[5]/10,clockBuffer[5]%10,clockBuffer[6]/10,clockBuffer[6]%10,clockBuffer[7]%10);
 		/* USER CODE BEGIN 3 */
 	}
   /* USER CODE END 3 */

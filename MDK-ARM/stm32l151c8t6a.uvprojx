@@ -528,7 +528,7 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>UserHardware/SHT31</GroupName>
+          <GroupName>UserHardware</GroupName>
           <Files>
             <File>
               <FileName>sht31_iic.c</FileName>
@@ -539,6 +539,91 @@
               <FileName>delay.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\UserHardware\Delay\delay.c</FilePath>
+            </File>
+            <File>
+              <FileName>pcf8563.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\UserHardware\pcf8563\pcf8563.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>ePaper/Config</GroupName>
+          <Files>
+            <File>
+              <FileName>DEV_Config.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\UserHardware\ePaper_2in13\Config\DEV_Config.c</FilePath>
+            </File>
+            <File>
+              <FileName>EPD_2in13.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\UserHardware\ePaper_2in13\Config\EPD_2in13.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>ePaper/GUI</GroupName>
+          <Files>
+            <File>
+              <FileName>GUI_Paint.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\UserHardware\ePaper_2in13\GUI\GUI_Paint.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>ePaper/Fonts</GroupName>
+          <Files>
+            <File>
+              <FileName>font8.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\UserHardware\ePaper_2in13\Fonts\font8.c</FilePath>
+            </File>
+            <File>
+              <FileName>font12.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\UserHardware\ePaper_2in13\Fonts\font12.c</FilePath>
+            </File>
+            <File>
+              <FileName>font12CN.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\UserHardware\ePaper_2in13\Fonts\font12CN.c</FilePath>
+            </File>
+            <File>
+              <FileName>font16.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\UserHardware\ePaper_2in13\Fonts\font16.c</FilePath>
+            </File>
+            <File>
+              <FileName>font20.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\UserHardware\ePaper_2in13\Fonts\font20.c</FilePath>
+            </File>
+            <File>
+              <FileName>font24.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\UserHardware\ePaper_2in13\Fonts\font24.c</FilePath>
+            </File>
+            <File>
+              <FileName>font24CN.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\UserHardware\ePaper_2in13\Fonts\font24CN.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>ePaper/Example</GroupName>
+          <Files>
+            <File>
+              <FileName>ImageData.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\UserHardware\ePaper_2in13\Example\ImageData.c</FilePath>
+            </File>
+            <File>
+              <FileName>EPD_2in13_test.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\UserHardware\ePaper_2in13\Example\EPD_2in13_test.c</FilePath>
             </File>
           </Files>
         </Group>
