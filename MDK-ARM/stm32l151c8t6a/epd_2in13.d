@@ -34,3 +34,4 @@ stm32l151c8t6a\epd_2in13.o: ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_sp
 stm32l151c8t6a\epd_2in13.o: ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_uart.h
 stm32l151c8t6a\epd_2in13.o: ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_exti.h
 stm32l151c8t6a\epd_2in13.o: ..\UserHardware\ePaper_2in13/Config/Debug.h
+stm32l151c8t6a\epd_2in13.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h

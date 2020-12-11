@@ -46,3 +46,4 @@ stm32l151c8t6a\main.o: ..\UserHardware\ePaper_2in13/GUI/../Fonts/fonts.h
 stm32l151c8t6a\main.o: ..\UserHardware\ePaper_2in13/Example/imagedata.h
 stm32l151c8t6a\main.o: ..\UserHardware\ePaper_2in13/Config/Debug.h
 stm32l151c8t6a\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+stm32l151c8t6a\main.o: ../Core/Inc/display.h

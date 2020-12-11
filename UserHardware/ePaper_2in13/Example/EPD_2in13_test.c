@@ -31,6 +31,8 @@
 #include "ePaper_2in13/Config/EPD_2in13.h"
 #include <stdio.h>
 
+#define EPD_2IN13_TEST 0
+#if EPD_2IN13_TEST
 int EPD_2in13_test(void)
 {
     printf("EPD_2IN13_test Demo\r\n");
@@ -84,8 +86,8 @@ int EPD_2in13_test(void)
     Paint_DrawCircle(45, 35, 20, BLACK, DOT_PIXEL_1X1, DRAW_FILL_EMPTY);
     Paint_DrawCircle(110, 35, 20, WHITE, DOT_PIXEL_1X1, DRAW_FILL_FULL);
 
-    Paint_DrawString_EN(140, 15, "waveshare", &Font16, BLACK, WHITE);
-    Paint_DrawNum(140, 40, 123456789, &Font16, BLACK, WHITE);
+	Paint_DrawString_EN(140, 15, "waveshare", &Font16, BLACK, WHITE);
+    Paint_DrawNum(140, 40, 1234567890, &Font16, BLACK, WHITE);
 
     Paint_DrawString_CN(140, 60, "ÄãºÃabc", &Font12CN, BLACK, WHITE);
     Paint_DrawString_CN(5, 65, "Î¢Ñ©µç×Ó", &Font24CN, WHITE, BLACK);
@@ -146,3 +148,4 @@ int EPD_2in13_test(void)
     return 0;
 }
 
+#endif

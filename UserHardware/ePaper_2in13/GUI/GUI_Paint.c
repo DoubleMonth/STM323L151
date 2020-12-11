@@ -712,11 +712,11 @@ void Paint_DrawNum(UWORD Xpoint, UWORD Ypoint, int32_t Nummber,
     }
 
     //Converts a number to a string
-    while (Nummber) {
+     do {
         Num_Array[Num_Bit] = Nummber % 10 + '0';
         Num_Bit++;
         Nummber /= 10;
-    }
+    }while (Nummber);
 
     //The string is inverted
     while (Num_Bit > 0) {

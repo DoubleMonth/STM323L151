@@ -420,6 +420,11 @@
               <FileType>1</FileType>
               <FilePath>../Core/Src/stm32l1xx_hal_msp.c</FilePath>
             </File>
+            <File>
+              <FileName>display.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\display.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -609,6 +614,16 @@
               <FileName>font24CN.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\UserHardware\ePaper_2in13\Fonts\font24CN.c</FilePath>
+            </File>
+            <File>
+              <FileName>font80.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\UserHardware\ePaper_2in13\Fonts\font80.c</FilePath>
+            </File>
+            <File>
+              <FileName>font21CN.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\UserHardware\ePaper_2in13\Fonts\font21CN.c</FilePath>
             </File>
           </Files>
         </Group>

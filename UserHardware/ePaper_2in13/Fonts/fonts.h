@@ -84,9 +84,12 @@ extern sFONT Font20;
 extern sFONT Font16;
 extern sFONT Font12;
 extern sFONT Font8;
+extern sFONT Font80;
 
 extern cFONT Font12CN;
 extern cFONT Font24CN;
+
+extern cFONT Font21CN;
 #ifdef __cplusplus
 }
 #endif

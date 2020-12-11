@@ -1,6 +1,6 @@
 Dependencies for Project 'stm32l151c8t6a', Target 'stm32l151c8t6a': (DO NOT MODIFY !)
 F (startup_stm32l151xba.s)(0x5FD23146)(--cpu Cortex-M3 -g --apcs=interwork --pd "__MICROLIB SETA 1"-I C:\Users\HaiFeng\Desktop\stm32l151c8t6a\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include--pd "__UVISION_VERSION SETA 518" --pd "_RTE_ SETA 1" --pd "STM32L151xBA SETA 1"--list startup_stm32l151xba.lst --xref -o stm32l151c8t6a\startup_stm32l151xba.o --depend stm32l151c8t6a\startup_stm32l151xba.d)
-F (../Core/Src/main.c)(0x5FD22E86)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Drivers/CMSIS/Include -I ..\UserHardware-I C:\Users\HaiFeng\Desktop\stm32l151c8t6a\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32l151c8t6a\main.o --omf_browse stm32l151c8t6a\main.crf --depend stm32l151c8t6a\main.d)
+F (../Core/Src/main.c)(0x5FD399CF)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Drivers/CMSIS/Include -I ..\UserHardware-I C:\Users\HaiFeng\Desktop\stm32l151c8t6a\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32l151c8t6a\main.o --omf_browse stm32l151c8t6a\main.crf --depend stm32l151c8t6a\main.d)
 I (../Core/Inc/main.h)(0x5FD22AFF)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal.h)(0x5FB3E30D)
 I (../Core/Inc/stm32l1xx_hal_conf.h)(0x5FCE3BF7)
@@ -43,10 +43,11 @@ I (..\UserHardware\pcf8563/pcf8563.h)(0x5FD0E384)
 I (..\UserHardware\ePaper_2in13/Example/EPD_Test.h)(0x5FD22D04)
 I (..\UserHardware\ePaper_2in13/Config/DEV_Config.h)(0x5FD22AFF)
 I (..\UserHardware\ePaper_2in13/GUI/GUI_Paint.h)(0x5FD22B7E)
-I (..\UserHardware\ePaper_2in13/GUI/../Fonts/fonts.h)(0x5BD6A308)
+I (..\UserHardware\ePaper_2in13/GUI/../Fonts/fonts.h)(0x5FD3848A)
 I (..\UserHardware\ePaper_2in13/Example/imagedata.h)(0x5FC6FF03)
 I (..\UserHardware\ePaper_2in13/Config/Debug.h)(0x5BEFB7E6)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x55DB2B78)
+I (../Core/Inc/display.h)(0x5FD37B95)
 F (../Core/Src/gpio.c)(0x5FD22AFF)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Drivers/CMSIS/Include -I ..\UserHardware-I C:\Users\HaiFeng\Desktop\stm32l151c8t6a\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32l151c8t6a\gpio.o --omf_browse stm32l151c8t6a\gpio.crf --depend stm32l151c8t6a\gpio.d)
 I (../Core/Inc/gpio.h)(0x5FCE3BF6)
 I (../Core/Inc/main.h)(0x5FD22AFF)
@@ -245,6 +246,52 @@ I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_pwr_ex.h)(0x5FB3E30D)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_spi.h)(0x5FB3E30D)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_uart.h)(0x5FB3E30D)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_exti.h)(0x5FB3E30D)
+F (..\Core\Src\display.c)(0x5FD39FD8)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Drivers/CMSIS/Include -I ..\UserHardware-I C:\Users\HaiFeng\Desktop\stm32l151c8t6a\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32l151c8t6a\display.o --omf_browse stm32l151c8t6a\display.crf --depend stm32l151c8t6a\display.d)
+I (../Core/Inc/display.h)(0x5FD37B95)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5D027B04)
+I (..\UserHardware\delay/delay.h)(0x5FCF9640)
+I (../Core/Inc/main.h)(0x5FD22AFF)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal.h)(0x5FB3E30D)
+I (../Core/Inc/stm32l1xx_hal_conf.h)(0x5FCE3BF7)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_rcc.h)(0x5FB3E30D)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_def.h)(0x5FB3E30D)
+I (../Drivers/CMSIS/Device/ST/STM32L1xx/Include/stm32l1xx.h)(0x5FB3E2FD)
+I (../Drivers/CMSIS/Device/ST/STM32L1xx/Include/stm32l151xba.h)(0x5FB3E2FD)
+I (../Drivers/CMSIS/Include/core_cm3.h)(0x5FB3E303)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x5FB3E303)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x5FB3E303)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5FB3E303)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x5FB3E303)
+I (../Drivers/CMSIS/Device/ST/STM32L1xx/Include/system_stm32l1xx.h)(0x5FB3E2FD)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5FB3E30D)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x55DB2B7E)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_rcc_ex.h)(0x5FB3E30D)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_gpio.h)(0x5FB3E30D)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_gpio_ex.h)(0x5FB3E30D)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_dma.h)(0x5FB3E30D)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_cortex.h)(0x5FB3E30D)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_adc.h)(0x5FB3E30D)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_adc_ex.h)(0x5FB3E30D)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_flash.h)(0x5FB3E30D)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_flash_ex.h)(0x5FB3E30D)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_flash_ramfunc.h)(0x5FB3E30D)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_pwr.h)(0x5FB3E30D)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_pwr_ex.h)(0x5FB3E30D)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_spi.h)(0x5FB3E30D)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_uart.h)(0x5FB3E30D)
+I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_exti.h)(0x5FB3E30D)
+I (../Core/Inc/usart.h)(0x5FCF9489)
+I (..\UserHardware\ePaper_2in13/Example/EPD_Test.h)(0x5FD22D04)
+I (..\UserHardware\ePaper_2in13/Config/DEV_Config.h)(0x5FD22AFF)
+I (..\UserHardware\ePaper_2in13/GUI/GUI_Paint.h)(0x5FD22B7E)
+I (..\UserHardware\ePaper_2in13/GUI/../Fonts/fonts.h)(0x5FD3848A)
+I (..\UserHardware\ePaper_2in13/Example/imagedata.h)(0x5FC6FF03)
+I (..\UserHardware\ePaper_2in13/Config/Debug.h)(0x5BEFB7E6)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x55DB2B78)
+I (..\UserHardware\ePaper_2in13/Config/EPD_2in13.h)(0x5FD22AFF)
+I (..\UserHardware\pcf8563/pcf8563.h)(0x5FD0E384)
+I (..\UserHardware\SHT31/sht31_iic.h)(0x5FCFB6DD)
 F (../Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_adc.c)(0x5FB3E30D)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Drivers/CMSIS/Include -I ..\UserHardware-I C:\Users\HaiFeng\Desktop\stm32l151c8t6a\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32l151c8t6a\stm32l1xx_hal_adc.o --omf_browse stm32l151c8t6a\stm32l1xx_hal_adc.crf --depend stm32l151c8t6a\stm32l1xx_hal_adc.d)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal.h)(0x5FB3E30D)
 I (../Core/Inc/stm32l1xx_hal_conf.h)(0x5FCE3BF7)
@@ -971,7 +1018,7 @@ I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_pwr_ex.h)(0x5FB3E30D)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_spi.h)(0x5FB3E30D)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_uart.h)(0x5FB3E30D)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_exti.h)(0x5FB3E30D)
-F (..\UserHardware\ePaper_2in13\Config\EPD_2in13.c)(0x5FD22877)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Drivers/CMSIS/Include -I ..\UserHardware-I C:\Users\HaiFeng\Desktop\stm32l151c8t6a\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32l151c8t6a\epd_2in13.o --omf_browse stm32l151c8t6a\epd_2in13.crf --depend stm32l151c8t6a\epd_2in13.d)
+F (..\UserHardware\ePaper_2in13\Config\EPD_2in13.c)(0x5FD231AA)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Drivers/CMSIS/Include -I ..\UserHardware-I C:\Users\HaiFeng\Desktop\stm32l151c8t6a\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32l151c8t6a\epd_2in13.o --omf_browse stm32l151c8t6a\epd_2in13.crf --depend stm32l151c8t6a\epd_2in13.d)
 I (..\UserHardware\ePaper_2in13/Config/EPD_2in13.h)(0x5FD22AFF)
 I (..\UserHardware\ePaper_2in13/Config/DEV_Config.h)(0x5FD22AFF)
 I (../Core/Inc/main.h)(0x5FD22AFF)
@@ -1006,7 +1053,8 @@ I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_spi.h)(0x5FB3E30D)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_uart.h)(0x5FB3E30D)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_exti.h)(0x5FB3E30D)
 I (..\UserHardware\ePaper_2in13/Config/Debug.h)(0x5BEFB7E6)
-F (..\UserHardware\ePaper_2in13\GUI\GUI_Paint.c)(0x5FD22BE8)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Drivers/CMSIS/Include -I ..\UserHardware-I C:\Users\HaiFeng\Desktop\stm32l151c8t6a\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32l151c8t6a\gui_paint.o --omf_browse stm32l151c8t6a\gui_paint.crf --depend stm32l151c8t6a\gui_paint.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5D027B04)
+F (..\UserHardware\ePaper_2in13\GUI\GUI_Paint.c)(0x5FD39353)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Drivers/CMSIS/Include -I ..\UserHardware-I C:\Users\HaiFeng\Desktop\stm32l151c8t6a\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32l151c8t6a\gui_paint.o --omf_browse stm32l151c8t6a\gui_paint.crf --depend stm32l151c8t6a\gui_paint.d)
 I (..\UserHardware\ePaper_2in13/GUI/GUI_Paint.h)(0x5FD22B7E)
 I (..\UserHardware\ePaper_2in13/Config/DEV_Config.h)(0x5FD22AFF)
 I (../Core/Inc/main.h)(0x5FD22AFF)
@@ -1040,36 +1088,42 @@ I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_pwr_ex.h)(0x5FB3E30D)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_spi.h)(0x5FB3E30D)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_uart.h)(0x5FB3E30D)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_exti.h)(0x5FB3E30D)
-I (..\UserHardware\ePaper_2in13/GUI/../Fonts/fonts.h)(0x5BD6A308)
+I (..\UserHardware\ePaper_2in13/GUI/../Fonts/fonts.h)(0x5FD3848A)
 I (..\UserHardware\ePaper_2in13/Config/Debug.h)(0x5BEFB7E6)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x55DB2B78)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x55DB2B78)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x55DB2B7E)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5D027B04)
 F (..\UserHardware\ePaper_2in13\Fonts\font8.c)(0x5B3C9236)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Drivers/CMSIS/Include -I ..\UserHardware-I C:\Users\HaiFeng\Desktop\stm32l151c8t6a\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32l151c8t6a\font8.o --omf_browse stm32l151c8t6a\font8.crf --depend stm32l151c8t6a\font8.d)
-I (..\UserHardware\ePaper_2in13\Fonts\fonts.h)(0x5BD6A308)
+I (..\UserHardware\ePaper_2in13\Fonts\fonts.h)(0x5FD3848A)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
 F (..\UserHardware\ePaper_2in13\Fonts\font12.c)(0x5B3C9236)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Drivers/CMSIS/Include -I ..\UserHardware-I C:\Users\HaiFeng\Desktop\stm32l151c8t6a\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32l151c8t6a\font12.o --omf_browse stm32l151c8t6a\font12.crf --depend stm32l151c8t6a\font12.d)
-I (..\UserHardware\ePaper_2in13\Fonts\fonts.h)(0x5BD6A308)
+I (..\UserHardware\ePaper_2in13\Fonts\fonts.h)(0x5FD3848A)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
 F (..\UserHardware\ePaper_2in13\Fonts\font12CN.c)(0x5A9E48CE)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Drivers/CMSIS/Include -I ..\UserHardware-I C:\Users\HaiFeng\Desktop\stm32l151c8t6a\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32l151c8t6a\font12cn.o --omf_browse stm32l151c8t6a\font12cn.crf --depend stm32l151c8t6a\font12cn.d)
-I (..\UserHardware\ePaper_2in13\Fonts\fonts.h)(0x5BD6A308)
+I (..\UserHardware\ePaper_2in13\Fonts\fonts.h)(0x5FD3848A)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
 F (..\UserHardware\ePaper_2in13\Fonts\font16.c)(0x5B3C9236)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Drivers/CMSIS/Include -I ..\UserHardware-I C:\Users\HaiFeng\Desktop\stm32l151c8t6a\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32l151c8t6a\font16.o --omf_browse stm32l151c8t6a\font16.crf --depend stm32l151c8t6a\font16.d)
-I (..\UserHardware\ePaper_2in13\Fonts\fonts.h)(0x5BD6A308)
+I (..\UserHardware\ePaper_2in13\Fonts\fonts.h)(0x5FD3848A)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
-F (..\UserHardware\ePaper_2in13\Fonts\font20.c)(0x5B3C9236)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Drivers/CMSIS/Include -I ..\UserHardware-I C:\Users\HaiFeng\Desktop\stm32l151c8t6a\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32l151c8t6a\font20.o --omf_browse stm32l151c8t6a\font20.crf --depend stm32l151c8t6a\font20.d)
-I (..\UserHardware\ePaper_2in13\Fonts\fonts.h)(0x5BD6A308)
+F (..\UserHardware\ePaper_2in13\Fonts\font20.c)(0x5FD38820)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Drivers/CMSIS/Include -I ..\UserHardware-I C:\Users\HaiFeng\Desktop\stm32l151c8t6a\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32l151c8t6a\font20.o --omf_browse stm32l151c8t6a\font20.crf --depend stm32l151c8t6a\font20.d)
+I (..\UserHardware\ePaper_2in13\Fonts\fonts.h)(0x5FD3848A)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
 F (..\UserHardware\ePaper_2in13\Fonts\font24.c)(0x5B3C9236)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Drivers/CMSIS/Include -I ..\UserHardware-I C:\Users\HaiFeng\Desktop\stm32l151c8t6a\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32l151c8t6a\font24.o --omf_browse stm32l151c8t6a\font24.crf --depend stm32l151c8t6a\font24.d)
-I (..\UserHardware\ePaper_2in13\Fonts\fonts.h)(0x5BD6A308)
+I (..\UserHardware\ePaper_2in13\Fonts\fonts.h)(0x5FD3848A)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
 F (..\UserHardware\ePaper_2in13\Fonts\font24CN.c)(0x5A9E4AFB)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Drivers/CMSIS/Include -I ..\UserHardware-I C:\Users\HaiFeng\Desktop\stm32l151c8t6a\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32l151c8t6a\font24cn.o --omf_browse stm32l151c8t6a\font24cn.crf --depend stm32l151c8t6a\font24cn.d)
-I (..\UserHardware\ePaper_2in13\Fonts\fonts.h)(0x5BD6A308)
+I (..\UserHardware\ePaper_2in13\Fonts\fonts.h)(0x5FD3848A)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
-F (..\UserHardware\ePaper_2in13\Example\ImageData.c)(0x5FD22C9A)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Drivers/CMSIS/Include -I ..\UserHardware-I C:\Users\HaiFeng\Desktop\stm32l151c8t6a\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32l151c8t6a\imagedata.o --omf_browse stm32l151c8t6a\imagedata.crf --depend stm32l151c8t6a\imagedata.d)
+F (..\UserHardware\ePaper_2in13\Fonts\font80.c)(0x5F919EB4)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Drivers/CMSIS/Include -I ..\UserHardware-I C:\Users\HaiFeng\Desktop\stm32l151c8t6a\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32l151c8t6a\font80.o --omf_browse stm32l151c8t6a\font80.crf --depend stm32l151c8t6a\font80.d)
+I (..\UserHardware\ePaper_2in13\Fonts\fonts.h)(0x5FD3848A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+F (..\UserHardware\ePaper_2in13\Fonts\font21CN.c)(0x5FD382F2)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Drivers/CMSIS/Include -I ..\UserHardware-I C:\Users\HaiFeng\Desktop\stm32l151c8t6a\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32l151c8t6a\font21cn.o --omf_browse stm32l151c8t6a\font21cn.crf --depend stm32l151c8t6a\font21cn.d)
+I (..\UserHardware\ePaper_2in13\Fonts\fonts.h)(0x5FD3848A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+F (..\UserHardware\ePaper_2in13\Example\ImageData.c)(0x5FD3A23F)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Drivers/CMSIS/Include -I ..\UserHardware-I C:\Users\HaiFeng\Desktop\stm32l151c8t6a\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32l151c8t6a\imagedata.o --omf_browse stm32l151c8t6a\imagedata.crf --depend stm32l151c8t6a\imagedata.d)
 I (..\UserHardware\ePaper_2in13/Example/ImageData.h)(0x5FC6FF03)
-F (..\UserHardware\ePaper_2in13\Example\EPD_2in13_test.c)(0x5FD22DDB)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Drivers/CMSIS/Include -I ..\UserHardware-I C:\Users\HaiFeng\Desktop\stm32l151c8t6a\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32l151c8t6a\epd_2in13_test.o --omf_browse stm32l151c8t6a\epd_2in13_test.crf --depend stm32l151c8t6a\epd_2in13_test.d)
+F (..\UserHardware\ePaper_2in13\Example\EPD_2in13_test.c)(0x5FD399CF)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc -I ../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I ../Drivers/CMSIS/Include -I ..\UserHardware-I C:\Users\HaiFeng\Desktop\stm32l151c8t6a\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32L1xx_DFP\1.2.0\Device\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L151xBA -DUSE_HAL_DRIVER -DSTM32L151xBA-o stm32l151c8t6a\epd_2in13_test.o --omf_browse stm32l151c8t6a\epd_2in13_test.crf --depend stm32l151c8t6a\epd_2in13_test.d)
 I (..\UserHardware\ePaper_2in13/Example/EPD_Test.h)(0x5FD22D04)
 I (..\UserHardware\ePaper_2in13/Config/DEV_Config.h)(0x5FD22AFF)
 I (../Core/Inc/main.h)(0x5FD22AFF)
@@ -1104,7 +1158,7 @@ I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_spi.h)(0x5FB3E30D)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_uart.h)(0x5FB3E30D)
 I (../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_exti.h)(0x5FB3E30D)
 I (..\UserHardware\ePaper_2in13/GUI/GUI_Paint.h)(0x5FD22B7E)
-I (..\UserHardware\ePaper_2in13/GUI/../Fonts/fonts.h)(0x5BD6A308)
+I (..\UserHardware\ePaper_2in13/GUI/../Fonts/fonts.h)(0x5FD3848A)
 I (..\UserHardware\ePaper_2in13/Example/imagedata.h)(0x5FC6FF03)
 I (..\UserHardware\ePaper_2in13/Config/Debug.h)(0x5BEFB7E6)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x55DB2B78)

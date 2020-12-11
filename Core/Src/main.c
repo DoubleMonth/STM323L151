@@ -31,6 +31,7 @@
 #include "Delay/delay.h"
 #include "pcf8563/pcf8563.h"
 #include "ePaper_2in13/Example/EPD_Test.h"
+#include "display.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -104,7 +105,8 @@ int main(void)
 	PCF8563_IIC_Init();
 	PCF8563_WriteTime();
 	printf("InitFinsh\r\n");
-	EPD_2in13_test();
+	welcomeDisplay();
+//	EPD_2in13_test();
   /* USER CODE END 2 */
 
   /* Infinite loop */
