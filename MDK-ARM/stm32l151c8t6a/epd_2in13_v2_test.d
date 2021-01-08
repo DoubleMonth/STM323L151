@@ -38,3 +38,5 @@ stm32l151c8t6a\epd_2in13_v2_test.o: ..\UserHardware\ePaper_2in13/GUI/../Fonts/fo
 stm32l151c8t6a\epd_2in13_v2_test.o: ..\UserHardware\ePaper_2in13/Example/imagedata.h
 stm32l151c8t6a\epd_2in13_v2_test.o: ..\UserHardware\ePaper_2in13/Config/Debug.h
 stm32l151c8t6a\epd_2in13_v2_test.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+stm32l151c8t6a\epd_2in13_v2_test.o: ..\UserHardware\ePaper_2in13/Config/EPD_2IN13_V2.h
+stm32l151c8t6a\epd_2in13_v2_test.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h

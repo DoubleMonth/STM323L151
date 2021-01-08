@@ -5,7 +5,7 @@
 //////////////////////////////////////////////////////////////////////////////////	 
 
 
-unsigned char  time_buf1[8]={20,20,12,02,23,59,50,3};
+
 //uint8_t time_buf1[8]={1,2,3,4,5,6,7,8};
 unsigned char time_buf[8];
 unsigned char time_buf2[8];
@@ -23,7 +23,7 @@ void PCF8563_IIC_Init(void)
     GPIO_Initure.Mode=GPIO_MODE_OUTPUT_PP;  //推挽输出
     GPIO_Initure.Pull=GPIO_PULLUP;          //上拉
     GPIO_Initure.Speed=GPIO_SPEED_FREQ_HIGH;     //高速
-    HAL_GPIO_Init(GPIOB,&GPIO_Initure);
+    HAL_GPIO_Init(PCF8563_SCL_GPIO_Port,&GPIO_Initure);
     
 	HAL_GPIO_WritePin(PCF8563_SCL_GPIO_Port,PCF8563_SCL_Pin,GPIO_PIN_SET);
 	HAL_GPIO_WritePin(PCF8563_SDA_GPIO_Port,PCF8563_SDA_Pin,GPIO_PIN_SET);
@@ -172,13 +172,13 @@ static uint8_t PCF8563_WriteOneByte(uint8_t WriteAddr,uint8_t DataToWrite)
 	delay_us(20);
 	return 0;
 }
-void PCF8563_WriteTime(void)
+void PCF8563_WriteTime(uint8_t *_time_buf)
 {
 	uint8_t i,temp;
 	for(i=0;i<8;i++)
 	{
-		temp = time_buf1[i]/10;
-		time_buf[i] = time_buf1[i]%10;
+		temp = _time_buf[i]/10;
+		time_buf[i] = _time_buf[i]%10;
 		time_buf[i] = time_buf[i]+temp*16;
 	}
 	PCF8563_WriteOneByte(CONTROL_STATUS_1,0X20);

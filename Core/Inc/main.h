@@ -47,7 +47,8 @@ extern "C" {
 
 /* Exported macro ------------------------------------------------------------*/
 /* USER CODE BEGIN EM */
-
+#define DISPLAY_EPAPER 1
+#define UART_UPDATE_TIME 1
 /* USER CODE END EM */
 
 /* Exported functions prototypes ---------------------------------------------*/
@@ -58,10 +59,12 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define LED1_Pin GPIO_PIN_8
-#define LED1_GPIO_Port GPIOA
-#define LED2_Pin GPIO_PIN_15
-#define LED2_GPIO_Port GPIOA
+//#define LED1_Pin GPIO_PIN_8
+//#define LED1_GPIO_Port GPIOA
+//#define LED2_Pin GPIO_PIN_15
+//#define LED2_GPIO_Port GPIOA
+#define EPAPER_CTL_Pin GPIO_PIN_3
+#define EPAPER_CTL_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */
 
 #define RST_Pin GPIO_PIN_2

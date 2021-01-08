@@ -536,11 +536,6 @@
           <GroupName>UserHardware</GroupName>
           <Files>
             <File>
-              <FileName>sht31_iic.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\UserHardware\SHT31\sht31_iic.c</FilePath>
-            </File>
-            <File>
               <FileName>delay.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\UserHardware\Delay\delay.c</FilePath>
@@ -549,6 +544,16 @@
               <FileName>pcf8563.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\UserHardware\pcf8563\pcf8563.c</FilePath>
+            </File>
+            <File>
+              <FileName>key.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\UserHardware\key\key.c</FilePath>
+            </File>
+            <File>
+              <FileName>si7020_iic.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\UserHardware\si7020\si7020_iic.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -561,9 +566,9 @@
               <FilePath>..\UserHardware\ePaper_2in13\Config\DEV_Config.c</FilePath>
             </File>
             <File>
-              <FileName>EPD_2in13.c</FileName>
+              <FileName>EPD_2in13_V2.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\UserHardware\ePaper_2in13\Config\EPD_2in13.c</FilePath>
+              <FilePath>..\UserHardware\ePaper_2in13\Config\EPD_2in13_V2.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -636,9 +641,9 @@
               <FilePath>..\UserHardware\ePaper_2in13\Example\ImageData.c</FilePath>
             </File>
             <File>
-              <FileName>EPD_2in13_test.c</FileName>
+              <FileName>EPD_2in13_V2_test.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\UserHardware\ePaper_2in13\Example\EPD_2in13_test.c</FilePath>
+              <FilePath>..\UserHardware\ePaper_2in13\Example\EPD_2in13_V2_test.c</FilePath>
             </File>
           </Files>
         </Group>

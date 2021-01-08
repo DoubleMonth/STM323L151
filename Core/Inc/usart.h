@@ -28,6 +28,9 @@
 
 /* USER CODE BEGIN Includes */
 #include <stdio.h>
+#define USART_REC_LEN  			200  		//定义最大接收字节数 200
+#define RXBUFFERSIZE   1 					//缓存大小
+extern uint8_t aRxBuffer[RXBUFFERSIZE];			//HAL库USART接收Buffer
 /* USER CODE END Includes */
 
 extern UART_HandleTypeDef huart1;

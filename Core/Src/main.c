@@ -27,11 +27,13 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
-#include "SHT31/sht31_iic.h"
+#include "si7020/si7020_iic.h"
 #include "Delay/delay.h"
 #include "pcf8563/pcf8563.h"
 #include "ePaper_2in13/Example/EPD_Test.h"
 #include "display.h"
+#include "key/key.h"
+#include "pwr_stop.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -52,6 +54,8 @@
 
 /* USER CODE BEGIN PV */
 
+SI7020_DATA read_si7020_data;
+uint8_t clockBuffer_test[8]={0};
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -62,9 +66,14 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-SHT31_DATA Read_SHT31_DATA;//存储的湿度数据
-uint8_t clockBuffer[8]={0};
-extern uint8_t time_buffer[8];
+extern uint8_t Interrupt_1min;  //1分钟中断标志
+extern uint8_t Interrupt_10min; //10分钟中断标志
+//extern uint16_t USART_RX_STA;       //接收状态标记
+//extern UART_HandleTypeDef huart1;
+//extern uint8_t USART_RX_BUF[USART_REC_LEN];     //接收缓冲,最大USART_REC_LEN个字节.
+unsigned char  default_time_buf[8]={20,20,12,15,23,59,40,3};
+//uint8_t setTimeBuff[8]={0};
+
 /* USER CODE END 0 */
 
 /**
@@ -96,17 +105,19 @@ int main(void)
   /* Initialize all configured peripherals */
   delay_init(24);
   MX_GPIO_Init();
-  MX_ADC_Init();
   MX_SPI1_Init();
   MX_USART1_UART_Init();
   
   /* USER CODE BEGIN 2 */
-	SHT31_IIC_Init();
-	PCF8563_IIC_Init();
-	PCF8563_WriteTime();
-	printf("InitFinsh\r\n");
-	welcomeDisplay();
-//	EPD_2in13_test();
+	SI7020_IIC_Init();   //SHT31初始化
+	PCF8563_IIC_Init();   //PCF8563初始化
+	PCF8563_WriteTime(default_time_buf);   //PCF8563写时间
+	PCF8563_SetINT();
+	keyInit(); 					//按键和1秒中断初始化
+	printf("InitFinsh\r\n");   
+# if DISPLAY_EPAPER
+//	updateDisplayFull();   //全局刷新显示	
+#endif
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -115,10 +126,32 @@ int main(void)
 	{
 		/* USER CODE END WHILE */
 		delay_us(1000*1000);
-		SHT31_ReadTH(&Read_SHT31_DATA);
-		printf("temperature=%d,humidity=%d!\r\n",(uint32_t)(Read_SHT31_DATA.temperature*10.0),(uint32_t)(Read_SHT31_DATA.humidity*10.0));
-		PCF8563_ReadTime(clockBuffer);
-		printf("20%d%d-%d%d-%d%d  %d%d:%d%d:%d%d  week %d\r\n",clockBuffer[1]/10,clockBuffer[1]%10,clockBuffer[2]/10,clockBuffer[2]%10,clockBuffer[3]/10,clockBuffer[3]%10,clockBuffer[4]/10,clockBuffer[4]%10,clockBuffer[5]/10,clockBuffer[5]%10,clockBuffer[6]/10,clockBuffer[6]%10,clockBuffer[7]%10);
+		#if DISPLAY_EPAPER
+		if(Interrupt_10min>=10)			//每十分钟全局刷新显示一次
+		{
+			
+//			updateDisplayFull();   //全局刷新显示 
+			Interrupt_10min=0;
+			Interrupt_1min=0;  //设置1分钟标志为0，防止再次进行局部刷新
+			printf("PCF8563 interrupt 10min %d ",Interrupt_10min);
+		}
+		if(Interrupt_1min)   
+		{
+//			updateDisplayPart();   //局部刷新显示
+			Interrupt_1min=0;
+			printf("PCF8563 interrupt 1min %d ",Interrupt_1min);
+		}
+		#endif
+		#if UART_UPDATE_TIME
+		setTime();
+		#endif
+		PCF8563_ReadTime(clockBuffer_test);	
+		printf("%d%d-%d%d-%d%d\r\n",clockBuffer_test[1]/10,clockBuffer_test[1]%10,clockBuffer_test[2]/10,clockBuffer_test[2]%10,clockBuffer_test[3]/10,clockBuffer_test[3]%10);
+		printf("%d%d:%d%d:%d%d,%d\r\n",clockBuffer_test[4]/10,clockBuffer_test[4]%10,clockBuffer_test[5]/10,clockBuffer_test[5]%10,clockBuffer_test[6]/10,clockBuffer_test[6]%10,clockBuffer_test[7]%10);
+		enterStopMode();
+//		si7020Measure(&read_si7020_data);
+//		printf("tempERATURE=%d,humi=%d\r\n",(uint32_t)(read_si7020_data.temperature *10),(uint32_t)(read_si7020_data.humidity*10));
+		
 		/* USER CODE BEGIN 3 */
 	}
   /* USER CODE END 3 */

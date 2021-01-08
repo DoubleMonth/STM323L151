@@ -22,6 +22,9 @@
 
 /* USER CODE BEGIN 0 */
 #include <stdio.h>
+uint8_t USART_RX_BUF[USART_REC_LEN];     //接收缓冲,最大USART_REC_LEN个字节.
+uint32_t USART_RX_STA=0;       //接收状态标记	
+uint8_t aRxBuffer[RXBUFFERSIZE];//HAL库使用的串口接收缓冲
 /* USER CODE END 0 */
 
 UART_HandleTypeDef huart1;
@@ -43,7 +46,7 @@ void MX_USART1_UART_Init(void)
   {
     Error_Handler();
   }
-
+	HAL_UART_Receive_IT(&huart1,(uint8_t *)aRxBuffer,RXBUFFERSIZE);//该函数会开启接收中断：标志位UART_IT_RXNE，并且设置接收缓冲以及接收缓冲接收最大数据量
 }
 
 void HAL_UART_MspInit(UART_HandleTypeDef* uartHandle)
@@ -105,6 +108,7 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
 }
 
 /* USER CODE BEGIN 1 */
+// 重定向printf显示
 #ifdef __GNUC_
 #define PUTCHAR_PROTOTYPE int __io_putchar(int ch)
 #else
@@ -116,6 +120,41 @@ PUTCHAR_PROTOTYPE
  
 	return ch;
 }
+extern uint8_t set_key;
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+{
+	if (set_key==0)    //set按键没有按下的时候不接受串口数据
+		return;
+	if(huart->Instance==USART1)//如果是串口1
+	{
+		if((USART_RX_STA&0x8000)==0)//接收未完成
+		{
+			if(USART_RX_STA&0x4000)//接收到了0x0d
+			{
+				if(aRxBuffer[0]!=0x0a)USART_RX_STA=0;//接收错误,重新开始
+				else USART_RX_STA|=0x8000;	//接收完成了 
+			}
+			else //还没收到0X0D
+			{	
+				if(aRxBuffer[0]==0x0d)USART_RX_STA|=0x4000;
+				else
+				{
+					USART_RX_BUF[USART_RX_STA&0X3FFF]=aRxBuffer[0] ;
+					USART_RX_STA++;
+					if(USART_RX_STA>(USART_REC_LEN-1))USART_RX_STA=0;//接收数据错误,重新开始接收	  
+				}		 
+			}
+		}
+
+	}
+}
+
+//void USART1_IRQHandler(void)                	
+//{ 
+
+//} 
+
+
 /* USER CODE END 1 */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

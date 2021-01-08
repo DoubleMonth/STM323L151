@@ -15,13 +15,13 @@
 ////////////////////////////////////////////////////////////////////////////////// 	
 //IO方向设置  MODER
 
-#define SDA_IN()  do{GPIOB->MODER&=~(3<<(7*2));GPIOB->MODER|=(0<<(7*2));}while(0)	//PB7输入模式
-#define SDA_OUT() do{GPIOB->MODER&=~(3<<(7*2));GPIOB->MODER|=(1<<(7*2));}while(0)	//PB7输入模式
+#define SDA_IN()  do{GPIOB->MODER&=~(3<<(1*2));GPIOB->MODER|=(0<<(1*2));}while(0)	//PB7输入模式
+#define SDA_OUT() do{GPIOB->MODER&=~(3<<(1*2));GPIOB->MODER|=(1<<(1*2));}while(0)	//PB7输入模式
 
 
-#define PCF8563_SCL_Pin GPIO_PIN_6   //GPIO_PIN_0
+#define PCF8563_SCL_Pin GPIO_PIN_0   //GPIO_PIN_0
 #define PCF8563_SCL_GPIO_Port GPIOB
-#define PCF8563_SDA_Pin GPIO_PIN_7   //GPIO_PIN_1
+#define PCF8563_SDA_Pin GPIO_PIN_1   //GPIO_PIN_1
 #define PCF8563_SDA_GPIO_Port GPIOB
 
 #define PCF8563_ADDR    0xA2
@@ -59,7 +59,7 @@ static void PCF8563_IIC_NAck(void);				//IIC不发送ACK信号
 	
 static uint8_t PCF8563_ReadOneByte(uint16_t ReadAddr);
 void PCF8563_ReadTime(uint8_t *p_time_buf);
-void PCF8563_WriteTime(void);
+void PCF8563_WriteTime(uint8_t *_time_buf);
 void PCF8563_SetINT(void);
 void PCF8563_ClearINT(void);
 uint8_t PCF85636_ReadINT(void);

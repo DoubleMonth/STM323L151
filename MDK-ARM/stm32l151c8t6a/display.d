@@ -42,6 +42,7 @@ stm32l151c8t6a\display.o: ..\UserHardware\ePaper_2in13/GUI/../Fonts/fonts.h
 stm32l151c8t6a\display.o: ..\UserHardware\ePaper_2in13/Example/imagedata.h
 stm32l151c8t6a\display.o: ..\UserHardware\ePaper_2in13/Config/Debug.h
 stm32l151c8t6a\display.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
-stm32l151c8t6a\display.o: ..\UserHardware\ePaper_2in13/Config/EPD_2in13.h
+stm32l151c8t6a\display.o: ..\UserHardware\ePaper_2in13/Config/EPD_2in13_V2.h
 stm32l151c8t6a\display.o: ..\UserHardware\pcf8563/pcf8563.h
 stm32l151c8t6a\display.o: ..\UserHardware\SHT31/sht31_iic.h
+stm32l151c8t6a\display.o: ..\UserHardware\key/key.h

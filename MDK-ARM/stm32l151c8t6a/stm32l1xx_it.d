@@ -32,3 +32,5 @@ stm32l151c8t6a\stm32l1xx_it.o: ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal
 stm32l151c8t6a\stm32l1xx_it.o: ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_uart.h
 stm32l151c8t6a\stm32l1xx_it.o: ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_exti.h
 stm32l151c8t6a\stm32l1xx_it.o: ../Core/Inc/stm32l1xx_it.h
+stm32l151c8t6a\stm32l1xx_it.o: ../Core/Inc/usart.h
+stm32l151c8t6a\stm32l1xx_it.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h

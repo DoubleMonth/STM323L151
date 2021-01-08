@@ -4,5 +4,7 @@
 
 
 int EPD_2in13_test(void);
-int  welcomeDisplay(void);
+int  updateDisplayFull(void);
+int  updateDisplayPart(void);
+void setTime(void);
 #endif

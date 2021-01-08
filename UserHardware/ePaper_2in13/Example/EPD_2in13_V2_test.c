@@ -27,8 +27,10 @@
 # THE SOFTWARE.
 #
 ******************************************************************************/
+
 #include "ePaper_2in13/Example/EPD_Test.h"
 #include "ePaper_2in13/Config/EPD_2IN13_V2.h"
+#include <stdio.h>
 
 int EPD_2in13_V2_test(void)
 {

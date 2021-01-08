@@ -36,7 +36,7 @@ stm32l151c8t6a\main.o: ../Core/Inc/spi.h
 stm32l151c8t6a\main.o: ../Core/Inc/usart.h
 stm32l151c8t6a\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 stm32l151c8t6a\main.o: ../Core/Inc/gpio.h
-stm32l151c8t6a\main.o: ..\UserHardware\SHT31/sht31_iic.h
+stm32l151c8t6a\main.o: ..\UserHardware\si7020/si7020_iic.h
 stm32l151c8t6a\main.o: ..\UserHardware\Delay/delay.h
 stm32l151c8t6a\main.o: ..\UserHardware\pcf8563/pcf8563.h
 stm32l151c8t6a\main.o: ..\UserHardware\ePaper_2in13/Example/EPD_Test.h
@@ -47,3 +47,5 @@ stm32l151c8t6a\main.o: ..\UserHardware\ePaper_2in13/Example/imagedata.h
 stm32l151c8t6a\main.o: ..\UserHardware\ePaper_2in13/Config/Debug.h
 stm32l151c8t6a\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 stm32l151c8t6a\main.o: ../Core/Inc/display.h
+stm32l151c8t6a\main.o: ..\UserHardware\key/key.h
+stm32l151c8t6a\main.o: ../Core/Inc/pwr_stop.h
