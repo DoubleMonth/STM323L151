@@ -68,6 +68,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 		break ;  
 		case GPIO_PIN_15:   			//SET按键 1s中断
 			set_key++;
+		Interrupt_1min++;   //PCF8563 1分钟中断输出
 			printf("set key wakeup%d\r\n",set_key);
 		break;
 		default:

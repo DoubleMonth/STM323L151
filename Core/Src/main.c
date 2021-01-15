@@ -54,7 +54,7 @@
 
 /* USER CODE BEGIN PV */
 
-SI7020_DATA read_si7020_data;
+
 uint8_t clockBuffer_test[8]={0};
 /* USER CODE END PV */
 
@@ -116,39 +116,41 @@ int main(void)
 	keyInit(); 					//按键和1秒中断初始化
 	printf("InitFinsh\r\n");   
 # if DISPLAY_EPAPER
-//	updateDisplayFull();   //全局刷新显示	
+	updateDisplayFull();   //全局刷新显示	
 #endif
   /* USER CODE END 2 */
-
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 	while (1)
 	{
 		/* USER CODE END WHILE */
-		delay_us(1000*1000);
+		
 		#if DISPLAY_EPAPER
-		if(Interrupt_10min>=10)			//每十分钟全局刷新显示一次
+		if(Interrupt_10min>=5)			//每十分钟全局刷新显示一次
 		{
 			
-//			updateDisplayFull();   //全局刷新显示 
+			updateDisplayFull();   //全局刷新显示 
 			Interrupt_10min=0;
 			Interrupt_1min=0;  //设置1分钟标志为0，防止再次进行局部刷新
 			printf("PCF8563 interrupt 10min %d ",Interrupt_10min);
 		}
 		if(Interrupt_1min)   
 		{
-//			updateDisplayPart();   //局部刷新显示
+			updateDisplayPart();   //局部刷新显示
+//			updateDisplayFull();   //全局刷新显示 
 			Interrupt_1min=0;
 			printf("PCF8563 interrupt 1min %d ",Interrupt_1min);
 		}
+		//delay_us(1000*1000);
 		#endif
 		#if UART_UPDATE_TIME
 		setTime();
 		#endif
-		PCF8563_ReadTime(clockBuffer_test);	
-		printf("%d%d-%d%d-%d%d\r\n",clockBuffer_test[1]/10,clockBuffer_test[1]%10,clockBuffer_test[2]/10,clockBuffer_test[2]%10,clockBuffer_test[3]/10,clockBuffer_test[3]%10);
-		printf("%d%d:%d%d:%d%d,%d\r\n",clockBuffer_test[4]/10,clockBuffer_test[4]%10,clockBuffer_test[5]/10,clockBuffer_test[5]%10,clockBuffer_test[6]/10,clockBuffer_test[6]%10,clockBuffer_test[7]%10);
-		enterStopMode();
+//		PCF8563_ReadTime(clockBuffer_test);	
+//		printf("%d%d-%d%d-%d%d\r\n",clockBuffer_test[1]/10,clockBuffer_test[1]%10,clockBuffer_test[2]/10,clockBuffer_test[2]%10,clockBuffer_test[3]/10,clockBuffer_test[3]%10);
+//		printf("%d%d:%d%d:%d%d,%d\r\n",clockBuffer_test[4]/10,clockBuffer_test[4]%10,clockBuffer_test[5]/10,clockBuffer_test[5]%10,clockBuffer_test[6]/10,clockBuffer_test[6]%10,clockBuffer_test[7]%10);
+		//updateDisplayPart();   //局部刷新显示
+		//		enterStopMode();
 //		si7020Measure(&read_si7020_data);
 //		printf("tempERATURE=%d,humi=%d\r\n",(uint32_t)(read_si7020_data.temperature *10),(uint32_t)(read_si7020_data.humidity*10));
 		

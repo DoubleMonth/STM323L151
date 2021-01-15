@@ -6,5 +6,7 @@
 void enterStopMode(void);
 void SetUnusedPin(void);
 void afterWakeUpConfigAgain(void);
+void EPDPowerOn(void);
+void EPDPowerOff(void);
 #endif
 

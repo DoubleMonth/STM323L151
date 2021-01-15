@@ -18,7 +18,7 @@ void SetUnusedPin(void)
 	__HAL_RCC_GPIOB_CLK_ENABLE();   //使能GPIOC时钟
 	__HAL_RCC_GPIOC_CLK_ENABLE();   //使能GPIOC时钟
     
-	GPIO_Initure.Pin=GPIO_PIN_All;
+	GPIO_Initure.Pin|=GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3|GPIO_PIN_4|GPIO_PIN_5|GPIO_PIN_6|GPIO_PIN_7 ;
     GPIO_Initure.Mode=GPIO_MODE_ANALOG;  //模拟输入
     GPIO_Initure.Speed=GPIO_SPEED_FREQ_LOW;     //低速
     HAL_GPIO_Init(GPIOA,&GPIO_Initure);
@@ -33,11 +33,11 @@ void SetUnusedPin(void)
     GPIO_Initure.Speed=GPIO_SPEED_FREQ_LOW;     //低速
     HAL_GPIO_Init(GPIOC,&GPIO_Initure);
 	
-	GPIO_Initure.Pin |= GPIO_PIN_8|GPIO_PIN_15;  //外部唤醒引脚设置为中断输入
-	GPIO_Initure.Mode = GPIO_MODE_IT_FALLING;
-	GPIO_Initure.Pull = GPIO_PULLUP;
-	GPIO_Initure.Speed = GPIO_SPEED_FREQ_HIGH;
-	HAL_GPIO_Init(GPIOA, &GPIO_Initure);
+//	GPIO_Initure.Pin |= GPIO_PIN_8|GPIO_PIN_15;  //外部唤醒引脚设置为中断输入
+//	GPIO_Initure.Mode = GPIO_MODE_IT_FALLING;
+//	GPIO_Initure.Pull = GPIO_PULLUP;
+//	GPIO_Initure.Speed = GPIO_SPEED_FREQ_HIGH;
+//	HAL_GPIO_Init(GPIOA, &GPIO_Initure);
 	
 	__HAL_RCC_GPIOB_CLK_DISABLE();   //使能GPIOC时钟
 	__HAL_RCC_GPIOC_CLK_DISABLE();   //使能GPIOC时钟
@@ -49,7 +49,7 @@ void enterStopMode(void)
 	HAL_PWREx_EnableUltraLowPower();
 	HAL_PWREx_EnableFastWakeUp();
 	__HAL_PWR_CLEAR_FLAG(PWR_FLAG_WU);
-	HAL_PWR_EnterSTOPMode(PWR_LOWPOWERREGULATOR_ON,PWR_STOPENTRY_WFI);
+	HAL_PWR_EnterSTOPMode(PWR_LOWPOWERREGULATOR_ON,PWR_STOPENTRY_WFI);  //进入STOP模式
 }
 void afterWakeUpConfigAgain(void)
 {
@@ -62,4 +62,17 @@ void afterWakeUpConfigAgain(void)
 	keyInit(); 			//按键和1秒中断初始化
 	MX_USART1_UART_Init();
 }
-
+void EPDPowerOn(void)
+{
+	GPIO_InitTypeDef GPIO_InitStruct = {0};
+	GPIO_InitStruct.Pin = EPAPER_CTL_Pin;
+	GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+	GPIO_InitStruct.Pull = GPIO_PULLUP;
+	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+	HAL_GPIO_Init(EPAPER_CTL_GPIO_Port, &GPIO_InitStruct);
+	HAL_GPIO_WritePin(EPAPER_CTL_GPIO_Port, EPAPER_CTL_Pin, GPIO_PIN_SET);
+}
+void EPDPowerOff(void)
+{
+	HAL_GPIO_WritePin(EPAPER_CTL_GPIO_Port, EPAPER_CTL_Pin, GPIO_PIN_RESET);
+}

@@ -54,6 +54,7 @@ int EPD_2in9d_test(void);
 
 int EPD_2in13_test(void);
 int EPD_2in13_V2_test(void);
+uint16_t displayPart(void);
 int EPD_2in13bc_test(void);
 int EPD_2in13b_V3_test(void);
 int EPD_2in13d_test(void);
